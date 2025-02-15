@@ -12,17 +12,24 @@ const listaDeCompras = ["pepinillos","jamon","queso","huevo","carne","pollo","ag
 
 //AGREGUE UN PRODUCTO AL FINAL DE LA LISTA
 let agregarProducto = (producto) => {
-    listaDeCompras.push();
+    listaDeCompras.push(producto);
 }
 
 //ELIMINAR UN PRODUCTO AL FINAL DE LA LISTA
-let eliminarProducto = (producto) =>{
+let eliminarProducto = () =>{
     listaDeCompras.pop();
 }
 
 //IMPRIME TODOS LOS PRODUCTOS DE LA LISTA
 let mostrarLista = () => {
+    console.log("LISTA DE COMPRAS");
     for(let i = 0; i < listaDeCompras.length; i++){
-        console.log(listaDeCompras[i]);
+        console.log(`${i+1}. ${listaDeCompras[i]}`);
     }
 }
+
+mostrarLista();
+eliminarProducto();
+agregarProducto("agujetas para zapatos");
+console.log("-------------------------------------------------------------------")
+mostrarLista();
