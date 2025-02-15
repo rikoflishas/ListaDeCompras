@@ -8,7 +8,11 @@ Asegúrate de que no haya productos duplicados en la lista.
 */ 
 
 const listaDeCompras = ["pepinillos","jamon","queso","huevo","carne","pollo","aguacate","aceite de oliva","leche",
-    "cuadernos", "plumas", "lapices", "borrador"];
+    "cuadernos", "plumas", "queso", "lapices", "borrador", "aceite de oliva"];
+
+//CHECAR SI HAY DUPLICADOS
+const duplicates = listaDeCompras.filter( (item, index) => listaDeCompras.indexOf(item) !== index);
+console.log(`Duplicados: ${duplicates},`);
 
 //AGREGUE UN PRODUCTO AL FINAL DE LA LISTA
 let agregarProducto = (producto) => {
